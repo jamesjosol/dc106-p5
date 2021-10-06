@@ -1,12 +1,7 @@
 <div class="jumbotron jumbotron-fluid">
     <button class="btn btn-outline-primary rounded-circle btn-reset float-right" (click)="generateRandom()"><i class="fas fa-sync-alt"></i></button>
     <div class="container text-center">
-        <button class="round-button mr-3" [style.backgroundColor]="random[0].color" (click)="selectedNum(random[0])"><span>{{ random[0].number }}</span></button>
-        <button class="round-button mr-3" [style.backgroundColor]="random[1].color" (click)="selectedNum(random[1])"><span>{{ random[1].number }}</span></button>
-        <button class="round-button mr-3" [style.backgroundColor]="random[2].color" (click)="selectedNum(random[2])"><span>{{ random[2].number }}</span></button>
-        <button class="round-button mr-3" [style.backgroundColor]="random[3].color" (click)="selectedNum(random[3])"><span>{{ random[3].number }}</span></button>
-        <button class="round-button mr-3" [style.backgroundColor]="random[4].color" (click)="selectedNum(random[4])"><span>{{ random[4].number }}</span></button>
-        <button class="round-button mr-3" [style.backgroundColor]="random[5].color" (click)="selectedNum(random[5])"><span>{{ random[5].number }}</span></button>
+        <button *ngFor="let rnd of random" class="round-button mr-3" [style.backgroundColor]="rnd.color" (click)="selectedNum(rnd)"><span>{{ rnd.number }}</span></button>
     </div>
 </div>
 <div class="container">
