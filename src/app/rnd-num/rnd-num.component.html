@@ -1,0 +1,23 @@
+<div class="jumbotron jumbotron-fluid">
+    <button class="btn btn-outline-primary rounded-circle btn-reset float-right" (click)="generateRandom()"><i class="fas fa-sync-alt"></i></button>
+    <div class="container text-center">
+        <button class="round-button mr-3" [style.backgroundColor]="random[0].color" (click)="selectedNum(random[0])"><span>{{ random[0].number }}</span></button>
+        <button class="round-button mr-3" [style.backgroundColor]="random[1].color" (click)="selectedNum(random[1])"><span>{{ random[1].number }}</span></button>
+        <button class="round-button mr-3" [style.backgroundColor]="random[2].color" (click)="selectedNum(random[2])"><span>{{ random[2].number }}</span></button>
+        <button class="round-button mr-3" [style.backgroundColor]="random[3].color" (click)="selectedNum(random[3])"><span>{{ random[3].number }}</span></button>
+        <button class="round-button mr-3" [style.backgroundColor]="random[4].color" (click)="selectedNum(random[4])"><span>{{ random[4].number }}</span></button>
+        <button class="round-button mr-3" [style.backgroundColor]="random[5].color" (click)="selectedNum(random[5])"><span>{{ random[5].number }}</span></button>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-4">
+            <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">You have selected</h5>
+                  <div class="border p-2 text-white" [style.backgroundColor]="selected.color"><h1 class="font-weight-light">{{ selected.number }}</h1></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
